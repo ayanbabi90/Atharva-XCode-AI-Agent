@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D895DFF52E2B6BF700DB7B85 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895DFF42E2B6BF700DB7B85 /* Cocoa.framework */; };
+		D895DFF72E2B6BF700DB7B85 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D895DFF62E2B6BF700DB7B85 /* XcodeKit.framework */; };
+		D895E0012E2B6BF700DB7B85 /* Atharva Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D895DFF22E2B6BF700DB7B85 /* Atharva Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D8E6CC3C2E2BD56300780C1D /* AtharvaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E6CC3B2E2BD56300780C1D /* AtharvaCore.framework */; };
+		D8E6CC3D2E2BD56300780C1D /* AtharvaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8E6CC3B2E2BD56300780C1D /* AtharvaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8E6CC3F2E2BD56900780C1D /* AtharvaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E6CC3E2E2BD56900780C1D /* AtharvaCore.framework */; };
+		D8E6CC402E2BD56900780C1D /* AtharvaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8E6CC3E2E2BD56900780C1D /* AtharvaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D895DFFF2E2B6BF700DB7B85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D83FB2F22E2B69720001BFF3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D895DFF12E2B6BF700DB7B85;
+			remoteInfo = "Atharva Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D895E0022E2B6BF700DB7B85 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D895E0012E2B6BF700DB7B85 /* Atharva Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E6CBF72E2BD43600780C1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8E6CC3D2E2BD56300780C1D /* AtharvaCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8E6CBFA2E2BD43D00780C1D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D8E6CC402E2BD56900780C1D /* AtharvaCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D83FB2FA2E2B69720001BFF3 /* Atharva AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atharva AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D895DFF22E2B6BF700DB7B85 /* Atharva Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Atharva Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D895DFF42E2B6BF700DB7B85 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D895DFF62E2B6BF700DB7B85 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
+		D8E6CC3B2E2BD56300780C1D /* AtharvaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AtharvaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E6CC3E2E2BD56900780C1D /* AtharvaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AtharvaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D895E0052E2B6BF700DB7B85 /* Exceptions for "Atharva Extension" folder in "Atharva Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D895DFF12E2B6BF700DB7B85 /* Atharva Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D83FB2FC2E2B69720001BFF3 /* Atharva AI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Atharva AI";
+			sourceTree = "<group>";
+		};
+		D895DFF82E2B6BF700DB7B85 /* Atharva Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D895E0052E2B6BF700DB7B85 /* Exceptions for "Atharva Extension" folder in "Atharva Extension" target */,
+			);
+			path = "Atharva Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D83FB2F72E2B69720001BFF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E6CC3C2E2BD56300780C1D /* AtharvaCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D895DFEF2E2B6BF700DB7B85 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D895DFF52E2B6BF700DB7B85 /* Cocoa.framework in Frameworks */,
+				D895DFF72E2B6BF700DB7B85 /* XcodeKit.framework in Frameworks */,
+				D8E6CC3F2E2BD56900780C1D /* AtharvaCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D83FB2F12E2B69720001BFF3 = {
+			isa = PBXGroup;
+			children = (
+				D83FB2FC2E2B69720001BFF3 /* Atharva AI */,
+				D895DFF82E2B6BF700DB7B85 /* Atharva Extension */,
+				D895DFF32E2B6BF700DB7B85 /* Frameworks */,
+				D83FB2FB2E2B69720001BFF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D83FB2FB2E2B69720001BFF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D83FB2FA2E2B69720001BFF3 /* Atharva AI.app */,
+				D895DFF22E2B6BF700DB7B85 /* Atharva Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D895DFF32E2B6BF700DB7B85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8E6CC3E2E2BD56900780C1D /* AtharvaCore.framework */,
+				D8E6CC3B2E2BD56300780C1D /* AtharvaCore.framework */,
+				D895DFF42E2B6BF700DB7B85 /* Cocoa.framework */,
+				D895DFF62E2B6BF700DB7B85 /* XcodeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D83FB2F92E2B69720001BFF3 /* Atharva AI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D83FB3092E2B69750001BFF3 /* Build configuration list for PBXNativeTarget "Atharva AI" */;
+			buildPhases = (
+				D83FB2F62E2B69720001BFF3 /* Sources */,
+				D83FB2F72E2B69720001BFF3 /* Frameworks */,
+				D83FB2F82E2B69720001BFF3 /* Resources */,
+				D895E0022E2B6BF700DB7B85 /* Embed Foundation Extensions */,
+				D8E6CBF72E2BD43600780C1D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D895E0002E2B6BF700DB7B85 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D83FB2FC2E2B69720001BFF3 /* Atharva AI */,
+			);
+			name = "Atharva AI";
+			packageProductDependencies = (
+			);
+			productName = "Atharva AI";
+			productReference = D83FB2FA2E2B69720001BFF3 /* Atharva AI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D895DFF12E2B6BF700DB7B85 /* Atharva Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D895E0062E2B6BF700DB7B85 /* Build configuration list for PBXNativeTarget "Atharva Extension" */;
+			buildPhases = (
+				D895DFEE2E2B6BF700DB7B85 /* Sources */,
+				D895DFEF2E2B6BF700DB7B85 /* Frameworks */,
+				D895DFF02E2B6BF700DB7B85 /* Resources */,
+				D8E6CBFA2E2BD43D00780C1D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D895DFF82E2B6BF700DB7B85 /* Atharva Extension */,
+			);
+			name = "Atharva Extension";
+			packageProductDependencies = (
+			);
+			productName = "Atharva Extension";
+			productReference = D895DFF22E2B6BF700DB7B85 /* Atharva Extension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D83FB2F22E2B69720001BFF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D83FB2F92E2B69720001BFF3 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					D895DFF12E2B6BF700DB7B85 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = D83FB2F52E2B69720001BFF3 /* Build configuration list for PBXProject "Atharva AI" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D83FB2F12E2B69720001BFF3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D83FB2FB2E2B69720001BFF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D83FB2F92E2B69720001BFF3 /* Atharva AI */,
+				D895DFF12E2B6BF700DB7B85 /* Atharva Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D83FB2F82E2B69720001BFF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D895DFF02E2B6BF700DB7B85 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D83FB2F62E2B69720001BFF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D895DFEE2E2B6BF700DB7B85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D895E0002E2B6BF700DB7B85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D895DFF12E2B6BF700DB7B85 /* Atharva Extension */;
+			targetProxy = D895DFFF2E2B6BF700DB7B85 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D83FB3072E2B69750001BFF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D83FB3082E2B69750001BFF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		D83FB30A2E2B69750001BFF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Atharva AI/Atharva_AI.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Atharva AI/Preview Content\"";
+				DEVELOPMENT_TEAM = 3RLVQ92JR4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poc.Atharva-AI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D83FB30B2E2B69750001BFF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Atharva AI/Atharva_AI.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Atharva AI/Preview Content\"";
+				DEVELOPMENT_TEAM = 3RLVQ92JR4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poc.Atharva-AI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D895E0032E2B6BF700DB7B85 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Atharva Extension/Atharva_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RLVQ92JR4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Atharva Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Atharva Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poc.Atharva-AI.Atharva-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D895E0042E2B6BF700DB7B85 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Atharva Extension/Atharva_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RLVQ92JR4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Atharva Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Atharva Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.poc.Atharva-AI.Atharva-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D83FB2F52E2B69720001BFF3 /* Build configuration list for PBXProject "Atharva AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83FB3072E2B69750001BFF3 /* Debug */,
+				D83FB3082E2B69750001BFF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D83FB3092E2B69750001BFF3 /* Build configuration list for PBXNativeTarget "Atharva AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D83FB30A2E2B69750001BFF3 /* Debug */,
+				D83FB30B2E2B69750001BFF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D895E0062E2B6BF700DB7B85 /* Build configuration list for PBXNativeTarget "Atharva Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D895E0032E2B6BF700DB7B85 /* Debug */,
+				D895E0042E2B6BF700DB7B85 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D83FB2F22E2B69720001BFF3 /* Project object */;
+}
