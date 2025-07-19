@@ -1,246 +1,330 @@
-# Atharva AI - AI-Powered Xcode Extension
+# Atharva AI: Xcode AI Assistant
 
-An intelligent code completion and refactoring extension for Xcode, similar to GitHub Copilot, that provides AI-powered suggestions using OpenAI, Claude, or custom APIs.
+Atharva AI is a powerful, open-source Xcode extension and macOS app that brings intelligent AI-powered code completion, refactoring, and code analysis directly to Xcode. Think of it as GitHub Copilot specifically designed for the Apple development ecosystem.
 
-## Features
+## 🚀 Features
 
-- **AI Code Completion**: Get intelligent code suggestions based on context
-- **Code Refactoring**: Improve code quality with AI-powered refactoring
-- **Multi-Language Support**: Works with Swift, Objective-C, C++, JavaScript, Python, and more
-- **Multiple AI Providers**: Choose from OpenAI, Claude, or implement custom APIs
-- **Context-Aware**: Analyzes surrounding code for better suggestions
-- **Configurable**: Customize API settings, temperature, max tokens, and more
+### Core AI Capabilities
+- **Intelligent Code Completion**: Context-aware suggestions with multi-line code generation
+- **Smart Refactoring**: AI-powered code restructuring and optimization
+- **Code Analysis**: Detect bugs, suggest improvements, and explain complex code
+- **Documentation Generation**: Auto-generate comments and documentation
+- **Test Generation**: Create unit tests based on your code
 
-## Installation
+### Language Support
+- **Swift**: Full support with iOS/macOS framework awareness
+- **Objective-C**: Legacy code support and modernization suggestions
+- **C/C++**: System-level programming assistance
+- **Python**: Cross-platform scripting support
+- **JavaScript/TypeScript**: Web development integration
+- **More languages**: Extensible architecture for additional language support
 
-### Prerequisites
+### AI Provider Flexibility
+- **OpenAI GPT Models**: GPT-3.5, GPT-4, and custom fine-tuned models
+- **Anthropic Claude**: Claude-3 and Claude-2 support
+- **Custom Endpoints**: Support for self-hosted or enterprise AI models
+- **Multiple Providers**: Switch between providers based on task type
 
-- Xcode 15.0 or later
-- macOS 13.0 or later
-- An API key from your chosen AI provider (OpenAI, Anthropic, etc.)
+### Advanced Features
+- **Context-Aware Processing**: Understands project structure and dependencies
+- **Caching System**: Intelligent caching for improved performance
+- **Offline Mode**: Basic functionality without internet connection
+- **Privacy-First**: No data logging or telemetry
+- **Customizable Prompts**: Tailor AI behavior to your coding style
 
-### Setup Steps
+## 📋 Requirements
+
+### System Requirements
+- **macOS**: 12.0 (Monterey) or later
+- **Xcode**: 14.0 or later
+- **Swift**: 5.7+ for development
+- **Memory**: 8GB RAM minimum, 16GB recommended
+- **Storage**: 500MB for installation
+- **Network**: Internet connection for AI API calls
+
+### Developer Requirements
+- Apple Developer account (for code signing and distribution)
+- Valid API key from supported AI provider
+- Basic understanding of Xcode extension architecture
+
+## 🛠 Installation
+
+### Option 1: Pre-built Release (Recommended)
+
+1. **Download the Latest Release**
+   ```sh
+   # Download from GitHub releases
+   curl -L https://github.com/your-org/atharva-ai/releases/latest/download/Atharva-AI.dmg -o Atharva-AI.dmg
+   ```
+
+2. **Install the Application**
+   - Mount the DMG file
+   - Drag `Atharva AI.app` to Applications folder
+   - Launch the app and grant necessary permissions
+
+3. **Enable System Extension**
+   - Go to **System Preferences → Extensions → Xcode Source Editor**
+   - Check the box next to "Atharva AI"
+   - Restart Xcode for changes to take effect
+
+### Option 2: Build from Source
 
 1. **Clone the Repository**
-   ```bash
-   git clone <your-repo-url>
-   cd Atharva-AI
+   ```sh
+   git clone https://github.com/your-org/atharva-ai.git
+   cd atharva-ai
    ```
 
 2. **Open in Xcode**
-   ```bash
-   open "Atharva AI.xcodeproj"
+   ```sh
+   open Atharva-XCode-AI-Agent.xcodeproj
    ```
 
-3. **Configure Team and Bundle ID**
-   - Select the project in Xcode
-   - Update the Team and Bundle Identifier for both targets:
-     - `Atharva AI` (main app)
-     - `Atharva Extension` (source editor extension)
+3. **Configure Signing**
+   - Select your development team in project settings
+   - Update bundle identifiers if needed
+   - Ensure both app and extension targets are properly signed
 
 4. **Build and Run**
-   - Build the project (`Cmd+B`)
-   - Run the main app (`Cmd+R`)
-   - This will install the extension in Xcode
+   - Build the project (⌘+B)
+   - Run the host application (⌘+R)
+   - Follow system extension enablement steps above
 
-5. **Enable the Extension**
-   - Open Xcode preferences (`Cmd+,`)
-   - Go to Extensions tab
-   - Enable "Atharva Extension"
+## ⚙️ Configuration
 
-6. **Configure API Key**
-   - Launch the Atharva AI app
-   - Open Settings
-   - Enter your API key and configure preferences
-   - Test the connection
+### Initial Setup
 
-## Configuration
+1. **Launch Atharva AI**
+   - Open the host application from Applications folder
+   - The configuration window will appear automatically
 
-### API Providers
+2. **Configure AI Provider**
+   ```
+   Provider: OpenAI / Claude / Custom
+   API Key: [Your API key]
+   Model: gpt-4 / claude-3-sonnet / custom-model
+   Base URL: [For custom providers]
+   ```
 
-#### OpenAI
-- **API Key**: Get from [OpenAI Platform](https://platform.openai.com/api-keys)
-- **Model**: `gpt-4`, `gpt-3.5-turbo`, or newer models
-- **Base URL**: `https://api.openai.com/v1`
+3. **Adjust Settings**
+   - **Max Tokens**: 256-2048 (controls response length)
+   - **Temperature**: 0.1-1.0 (creativity vs consistency)
+   - **Context Window**: Number of lines to include as context
+   - **Auto-completion**: Enable/disable real-time suggestions
 
-#### Claude (Anthropic)
-- **API Key**: Get from [Anthropic Console](https://console.anthropic.com/)
-- **Model**: `claude-3-sonnet-20240229`, `claude-3-haiku-20240307`
-- **Base URL**: `https://api.anthropic.com`
+### Advanced Configuration
 
-#### Custom API
-- **Base URL**: Your custom API endpoint
-- **Model**: Your custom model name
-- **Headers**: Configured in `AIHelper.swift`
+#### Custom Prompts
+```json
+{
+  "completion_prompt": "Complete the following code:\n{context}\n\nProvide only the completion:",
+  "refactor_prompt": "Refactor this code for better readability:\n{code}",
+  "explain_prompt": "Explain what this code does:\n{code}"
+}
+```
 
-### Settings
+#### Performance Tuning
+- **Cache Duration**: How long to keep cached responses (default: 5 minutes)
+- **Request Timeout**: Maximum wait time for API responses (default: 30 seconds)
+- **Retry Attempts**: Number of retry attempts for failed requests (default: 3)
 
-- **Temperature**: Controls randomness (0.0 = deterministic, 1.0 = creative)
-- **Max Tokens**: Maximum completion length
-- **Context Window**: Lines of code to include for context
+## 🎯 Usage
 
-## Usage
+### Basic Code Completion
 
-### Code Completion
-
-1. Place your cursor where you want suggestions
-2. Go to **Editor → Atharva AI → AI Code Completion**
-3. Wait for the AI to generate and insert suggestions
-4. Or assign a keyboard shortcut in Xcode preferences
+1. **Position Cursor**: Place cursor where you want AI assistance
+2. **Trigger Command**: Use keyboard shortcut (⌘+Shift+A) or Editor menu
+3. **Review Suggestion**: AI-generated code appears inline
+4. **Accept/Reject**: Press Tab to accept or Esc to dismiss
 
 ### Code Refactoring
 
-1. Select the code you want to refactor
-2. Go to **Editor → Atharva AI → AI Refactor Code**
-3. The AI will analyze and improve your code
+1. **Select Code Block**: Highlight the code you want to refactor
+2. **Open Refactor Menu**: Editor → Atharva AI → Refactor Code
+3. **Choose Refactoring Type**:
+   - Optimize performance
+   - Improve readability
+   - Add error handling
+   - Convert to modern syntax
 
-### Keyboard Shortcuts
+### Advanced Features
 
-You can assign custom keyboard shortcuts:
-1. Xcode → Preferences → Key Bindings
-2. Search for "Atharva AI"
-3. Assign shortcuts (e.g., `Cmd+Shift+A` for completion)
-
-## Architecture
-
-```
-Atharva AI.xcodeproj/
-├── Atharva AI/                    # Main macOS app
-│   ├── Atharva_AIApp.swift       # App entry point
-│   ├── ContentView.swift         # Main UI
-│   └── SettingsView.swift        # Configuration UI
-└── Atharva Extension/            # Xcode Source Editor Extension
-    ├── SourceEditorExtension.swift    # Extension registration
-    ├── AICompletionCommand.swift      # Code completion logic
-    ├── AIRefactorCommand.swift        # Code refactoring logic
-    ├── AIHelper.swift                 # API communication
-    ├── Models.swift                   # Data models
-    └── Constants.swift                # Configuration constants
+#### Context-Aware Completion
+```swift
+class UserManager {
+    private var users: [User] = []
+    
+    func addUser(_ user: User) {
+        // Cursor here - AI understands the class context
+        // Suggests: users.append(user)
+    }
+}
 ```
 
-## Technical Details
-
-### How Xcode Extensions Work
-
-- **Source Editor Extensions** can read and modify source code
-- **Triggered manually** via menu or keyboard shortcuts
-- **Cannot provide real-time suggestions** like VS Code extensions
-- **Sandboxed environment** with limited system access
-
-### Context Extraction
-
-The extension extracts context around the cursor:
-- 50 lines before and after the cursor (configurable)
-- Marks cursor position with `<|cursor|>` token
-- Includes file type and language information
-
-### API Integration
-
-- Supports multiple AI providers through unified interface
-- Handles rate limiting and retries
-- Parses responses and extracts code suggestions
-- Error handling for network issues and API errors
-
-### Code Insertion
-
-- Handles both single-line and multi-line completions
-- Preserves existing code and cursor position
-- Updates Xcode selection after insertion
-
-## Limitations
-
-### Xcode Extension Constraints
-
-- **No real-time typing detection**: Must be triggered manually
-- **No inline UI**: Cannot show suggestions in popover/dropdown
-- **No background processing**: Runs only when triggered
-- **Sandboxed**: Limited file system and network access
-
-### Workarounds
-
-- Use keyboard shortcuts for quick access
-- Configure context window size for better suggestions
-- Implement caching for frequently used completions
-
-## Customization
-
-### Adding New AI Providers
-
-1. Add new case to `AIProvider` enum in `Models.swift`
-2. Implement request/response models
-3. Add handling in `AIHelper.swift`
-4. Update UI in `SettingsView.swift`
-
-### Extending Language Support
-
-1. Add UTI mapping in `Constants.supportedLanguages`
-2. Update file extension mapping in command classes
-3. Customize prompts for specific languages
-
-### Custom Prompts
-
-Modify prompts in `Constants.Prompts`:
-- `systemPrompt`: Overall AI behavior
-- `completionPrompt`: Context for completions
-
-## Troubleshooting
-
-### Extension Not Showing
-- Ensure both targets are built successfully
-- Check Xcode Extensions preferences
-- Restart Xcode after enabling
-
-### API Errors
-- Verify API key is correct and has credits
-- Check network connectivity
-- Review error messages in console
-
-### Poor Suggestions
-- Increase context window size
-- Adjust temperature setting
-- Try different AI models
-- Ensure sufficient code context
-
-### Performance Issues
-- Reduce max tokens for faster responses
-- Implement request caching
-- Use lighter AI models
-
-## Development
-
-### Building from Source
-
-```bash
-# Clone the repository
-git clone <repo-url>
-cd Atharva-AI
-
-# Open in Xcode
-open "Atharva AI.xcodeproj"
-
-# Build and run
-# Cmd+B to build
-# Cmd+R to run and install extension
+#### Multi-line Generation
+```swift
+// Type: "create a function to validate email"
+// AI generates complete function with validation logic
+func validateEmail(_ email: String) -> Bool {
+    let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+    return emailPredicate.evaluate(with: email)
+}
 ```
 
-### Contributing
+## 🔧 Troubleshooting
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+### Common Issues
 
-## License
+#### Extension Not Appearing
+```sh
+# Check if extension is enabled
+defaults read com.apple.dt.Xcode XCSourceEditorCommand
 
-[Your License Here]
+# Reset Xcode preferences if needed
+rm -rf ~/Library/Developer/Xcode/UserData
+```
 
-## Support
+#### API Connection Issues
+- Verify API key is correct and has sufficient credits
+- Check internet connection and firewall settings
+- Ensure the AI provider service is operational
 
-For issues and feature requests, please use the GitHub issue tracker.
+#### Performance Problems
+- Reduce context window size in settings
+- Clear application cache: Atharva AI → Clear Cache
+- Restart Xcode and the host application
 
-## Security
+### Debug Mode
 
-- API keys are stored in UserDefaults (consider Keychain for production)
-- Network requests use HTTPS
-- No code is stored on external servers beyond API calls
+Enable debug logging for detailed troubleshooting:
+```sh
+# Enable debug mode
+defaults write com.atharva.ai.extension DebugMode -bool true
+
+# View logs
+tail -f ~/Library/Logs/Atharva-AI/extension.log
+```
+
+## 🏗 Architecture
+
+### Project Structure
+```
+Atharva AI/
+├── Host App/                    # Main macOS application
+│   ├── Atharva_AIApp.swift    # App lifecycle management
+│   ├── ContentView.swift      # Main UI components
+│   ├── SettingsView.swift     # Configuration interface
+│   └── KeychainManager.swift  # Secure credential storage
+├── Extension/                   # Xcode Source Editor Extension
+│   ├── SourceEditorExtension.swift    # Extension entry point
+│   ├── Commands/                       # Command implementations
+│   │   ├── AICompletionCommand.swift  # Code completion logic
+│   │   ├── AIRefactorCommand.swift    # Refactoring operations
+│   │   └── AIExplainCommand.swift     # Code explanation
+│   ├── Core/                          # Core functionality
+│   │   ├── AIHelper.swift             # AI API communication
+│   │   ├── ContextExtractor.swift     # Code context analysis
+│   │   ├── CodeInserter.swift         # Text manipulation
+│   │   └── CacheManager.swift         # Response caching
+│   └── Models/                        # Data structures
+│       ├── CompletionRequest.swift    # API request models
+│       ├── AIResponse.swift           # API response models
+│       └── Configuration.swift       # Settings models
+└── Shared/                      # Shared resources
+    ├── Constants.swift         # App-wide constants
+    ├── Extensions.swift        # Utility extensions
+    └── Resources/              # Assets and localization
+```
+
+### Key Components
+
+#### AI Helper
+Central component managing AI provider communication:
+```swift
+class AIHelper {
+    private let config: AIProviderConfig
+    private let cache: CacheManager
+    private let session: URLSession
+    
+    func fetchCompletion(for context: CompletionContext) async throws -> String
+    func fetchRefactoring(for code: String, type: RefactoringType) async throws -> String
+}
+```
+
+#### Context Extractor
+Intelligent code context analysis:
+```swift
+class ContextExtractor {
+    func extractContext(from buffer: XCSourceTextBuffer, 
+                       around selection: XCSourceTextRange) -> CompletionContext
+    func detectLanguage(from uti: String) -> ProgrammingLanguage
+    func findRelevantImports(in lines: [String]) -> [String]
+}
+```
+
+## 📚 Documentation
+
+- **[Complete Tutorial](./TUTORIAL.md)**: Step-by-step development guide
+- **[Framework Integration](./FRAMEWORK_INTEGRATION.md)**: Using Atharva AI in your projects
+- **[API Reference](./docs/API.md)**: Detailed API documentation
+- **[Contributing Guide](./CONTRIBUTING.md)**: How to contribute to the project
+
+## 🔒 Security & Privacy
+
+### Data Handling
+- **No Data Collection**: We don't collect or store your code
+- **Local Processing**: Context analysis happens locally
+- **Secure Transmission**: All API calls use HTTPS with certificate pinning
+- **API Key Security**: Keys stored in macOS Keychain with encryption
+
+### Privacy Features
+- **Opt-in Telemetry**: Anonymous usage statistics (disabled by default)
+- **Code Filtering**: Ability to exclude sensitive files/directories
+- **Offline Mode**: Basic functionality without network access
+- **Audit Trail**: Log all AI interactions for security review
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
+
+### Development Setup
+```sh
+# Fork and clone the repository
+git clone https://github.com/your-username/atharva-ai.git
+
+# Create a development branch
+git checkout -b feature/your-feature
+
+# Make changes and test thoroughly
+# Submit a pull request
+```
+
+### Areas for Contribution
+- Additional AI provider integrations
+- New programming language support
+- Performance optimizations
+- UI/UX improvements
+- Documentation and tutorials
+
+## 📄 License
+
+MIT License - see [LICENSE](./LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- OpenAI for GPT models and API
+- Anthropic for Claude AI
+- Apple for Xcode extension framework
+- The open-source community for inspiration and feedback
+
+## 📞 Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/your-org/atharva-ai/issues)
+- **Documentation**: [Comprehensive guides and tutorials](./docs/)
+- **Community**: [Join our Discord server](https://discord.gg/atharva-ai)
+- **Email**: support@atharva-ai.com
+
+---
+
+**Made with ❤️ for the Apple development community**
